@@ -1,0 +1,54 @@
+###Create new user
+POST http://localhost:3000/auth/signup  
+content-type: application/json
+
+{
+    "email": "hellokitty@gmail.com",
+    "password" : "123445555321"
+}
+
+###sign in as an existing user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "hello@gmail.com",
+    "password" : "123445555321"
+}
+
+
+###Sign out
+POST  http://localhost:3000/auth/signout
+
+
+
+###Get the currently signed in user
+GET   http://localhost:3000/auth/whoami
+
+
+
+###find a user
+GET http://localhost:3000/auth/2
+
+
+
+###find all users with given email
+GET http://localhost:3000/auth?email=anhehe@gmail.com
+
+
+###DElete user with id
+DELETE http://localhost:3000/auth/2
+
+###Update user
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "email" : "aaaaa@gmail.com"
+}
+
+# ### Set a color
+# GET http://localhost:3000/auth/colors/blue
+
+# ###Get the color 
+# GET http://localhost:3000/auth/colors
